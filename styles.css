@@ -1,0 +1,11 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 360px;
+}
+
+.square {
+    padding: 10px;
+    flex: 1;
+}
