@@ -1,11 +1,17 @@
 #container {
     display: flex;
     flex-wrap: wrap;
-    width: 360px;
-    height: 360px;
+    max-width: 360px;
+    max-height: 360px;
 }
 
 .square {
     padding: 10px;
     flex: 1;
+    background: white; 
+    border: 1px solid black;
+}
+
+.square.active {
+    background: green;
 }
