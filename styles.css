@@ -1,15 +1,15 @@
 #container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 360px;
-    max-height: 360px;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin-top: 10px; 
 }
 
 .square {
-    padding: 10px;
     flex: 1;
-    background: white; 
-    border: 1px solid black;
+    background: white;
 }
 
 .square.active {
