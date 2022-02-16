@@ -1,7 +1,8 @@
-let sides = 16;
+let defaultSides = 16;
 
 const container = document.querySelector('#container');
 const grid = container.children;
+const gridInfo = document.querySelector('.grid-info');
 
 function generateGrid(sides) {
     for (let i = 0; i < (sides * sides); i++) {
@@ -14,16 +15,18 @@ function generateGrid(sides) {
         square.addEventListener('mouseover', (e) => {
             e.target.classList.add('active');
         });
+
+        gridInfo.textContent = `Grid size: ${sides}x${sides} square blocks`;
     
         container.appendChild(square);
     }
 }
 
-generateGrid(sides);
+generateGrid(defaultSides);
 
-const clear = document.querySelector('#clear');
+const reset = document.querySelector('#reset');
 
-clear.addEventListener('click', () => {
+reset.addEventListener('click', () => {
     
     // Source: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
     while (container.firstChild) {
@@ -32,15 +35,15 @@ clear.addEventListener('click', () => {
 
     let newSides = prompt("Enter number of squares per side for the new grid (maximum 100, default is 16)", "16");
     
-    if (newSides != null) {
-        if (parseInt(newSides) == NaN) {
-            newSides = 16;
-        } else {
-            newSides = parseInt(newSides);
-        }
-    } else {
+    if (newSides == null || isNaN(parseInt(newSides))) {
         newSides = 16;
+    } else if (parseInt(newSides) > 100) {
+        newSides = 100;
+    } else {
+        newSides = parseInt(newSides);
     }
+
+    console.log(newSides);
 
     generateGrid(newSides);
 });
