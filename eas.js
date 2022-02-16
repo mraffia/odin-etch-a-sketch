@@ -25,7 +25,6 @@ function generateGrid(sides) {
 generateGrid(defaultSides);
 
 const reset = document.querySelector('#reset');
-
 reset.addEventListener('click', () => {
     
     // Source: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
