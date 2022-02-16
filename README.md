@@ -6,3 +6,6 @@ A simplified browser version of something between a sketchpad and an Etch-A-Sket
 
 ### Demonstrated Skills
 HTML and CSS (Flexbox), Vanilla Javascript, and DOM Manipulation
+
+### Project Website
+https://mraffia.github.io/odin-etch-a-sketch/
