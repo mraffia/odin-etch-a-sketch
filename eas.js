@@ -9,7 +9,7 @@ function generateGrid(sides) {
         const square = document.createElement('div');
         square.classList.add('square');
 
-        let squarePadding = (500 / sides) / 2;
+        let squarePadding = (400 / sides) / 2;
         square.style.cssText = `padding : ${squarePadding}px`;
         
         square.addEventListener('mouseover', (e) => {
