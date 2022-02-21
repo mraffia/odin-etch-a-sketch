@@ -4,6 +4,10 @@ const container = document.querySelector('#container');
 const grid = container.children;
 const gridInfo = document.querySelector('.grid-info');
 
+// Source: https://css-tricks.com/snippets/javascript/random-hex-color/
+// Random color generator in hex form
+let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+
 function generateGrid(sides) {
     for (let i = 0; i < (sides * sides); i++) {
         const square = document.createElement('div');
