@@ -14,11 +14,12 @@ function generateGrid(sides) {
         square.style.cssText = `padding: ${squarePadding}px`;
         
         square.addEventListener('mouseover', (e) => {
-            e.target.style.cssText += `background-color: black`;
+            e.target.style.cssText += `background-color: black;`;
         });
 
-        gridInfo.textContent = `Grid size: ${sides}x${sides} square blocks`;
-    
+        gridInfo.textContent = `Grid size: ${sides}x${sides} square blocks`;   
+        trailInfo.textContent = `Trail color: Black`;
+
         gridContainer.appendChild(square);
     }
 }
@@ -27,7 +28,7 @@ generateGrid(defaultSides);
 
 const black = document.querySelector('#black');
 black.addEventListener('click', () => {
-    for (let i = 0; i < grid.length - 1; i++) {
+    for (let i = 0; i < grid.length; i++) {
         grid[i].addEventListener('mouseover', (e) => {
             e.target.style.cssText += `background-color: black`;
         });
@@ -37,7 +38,7 @@ black.addEventListener('click', () => {
 
 const rainbow = document.querySelector('#rainbow');
 rainbow.addEventListener('click', () => {
-    for (let i = 0; i < grid.length - 1; i++) {
+    for (let i = 0; i < grid.length; i++) {
         grid[i].addEventListener('mouseover', (e) => {
             // Source: https://css-tricks.com/snippets/javascript/random-hex-color/
             // Random color generator in hex form
