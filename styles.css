@@ -7,7 +7,7 @@ body {
 }
 
 .header {
-    padding: 16px;;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +19,18 @@ h1, p {
     text-align: center;
 }
 
-#container {
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#reset {
+    margin-right: 10px;
+}
+
+#grid-container {
     display: flex;
     flex-wrap: wrap;
     width: 400px;
@@ -32,10 +43,6 @@ h1, p {
 .square {
     flex: 1;
     background: white;
-}
-
-.square.active {
-    background: black;
 }
 
 .footer {
