@@ -50,6 +50,16 @@ rainbow.addEventListener('click', () => {
     trailInfo.textContent = `Trail color: Rainbow`;
 });
 
+const white = document.querySelector('#white');
+white.addEventListener('click', () => {
+    for (let i = 0; i < grid.length; i++) {
+        grid[i].addEventListener('mouseover', (e) => {
+            e.target.style.cssText += `background-color: white`;
+        });
+    }
+    trailInfo.textContent = `Trail color: White`;
+});
+
 const reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
     
